@@ -17,7 +17,8 @@ function startGame(){
 }
 
 function setNextQuestion(){
-
+next-btn = getNextquestion
+console.log('next');
 }
 
 function selectAnswer(){
