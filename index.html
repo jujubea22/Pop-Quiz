@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="panel">
+        <div class="result">
+
+        </div>
+        <div class="question-container" id="question">
+            Question goes here.
+        </div>
+        <div class="option-container">
+            <button class="option" onclick="" id="op1" >option1</button>
+    
+            <button class="option" id="op2" >option2</button>
+    
+            <button class="option" id="op3">option3</button>
+    
+            <button class="option" id="op4">option4</button>
+        </div>
+        <div class="navigation">
+            <button class="evaluate">Evaluate</button>
+            <button class="next">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+	
+
+
+// Questions will be asked
+const Questions = [{
+    id: 0,
+    q: "What does HTML stand for?",
+    a: [{ text: "Hype Technology Mode Language", isCorrect: false },
+        { text: "Hypertext Markup Language", isCorrect: true },
+        { text: "High Tech Module Link", isCorrect: false },
+        { text: "Helping Types Modes Link", isCorrect: false }
+    ]
+
+},
+{
+    id: 1,
+    q: "What language do you use for custom design?",
+    a: [{ text: "Boot Strap", isCorrect: false, isSelected: false },
+        { text: "Java Script", isCorrect: false },
+        { text: "HTML", isCorrect: false },
+        { text: "CSS", isCorrect: true }
+    ]
+
+},
+{
+    id: 2,
+    q: "Which is not a coding term",
+    a: [{ text: "jQuery", isCorrect: false },
+        { text: "Sudo", isCorrect: false },
+        { text: "Snake", isCorrect: true },
+        { text: "Python", isCorrect: false }
+    ]
+
+}
+
+]
+
+// Set start
+var start = true;
+
+// Iterate
+function iterate(id) {
+
+// Getting the result display section
+var result = document.getElementsByClassName("result");
+result[0].innerText = "";
+
+// Getting the question
+const question = document.getElementById("question");
+
+// Setting the question text
+question.innerText = Questions[id].q;
+</html>
