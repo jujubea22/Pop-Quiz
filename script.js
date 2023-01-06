@@ -1,44 +1,32 @@
 // question section
 
 var questions = [
-    {
-        title: "Which program allows you to design pages (color, fonts etc)?",
+    { title: "Which program allows you to design pages (color, fonts etc)?",
         choices: ["1. Javo", "2. RRTS", "3. HTML", "4. CSS"],
-        answer: "4. css"
-    },
+        answer: "4. css"},
 
 
-    {
-        title: "What does CSS stand for?",
+    {title: "What does CSS stand for?",
         choices: ["1. Creative Styling Structures", "2. Copy Simple Sheets", "3. Cascading Style Sheets", "D. None of the Above"],
-        answer: "3. Cascading Style Sheets"
-    },
+        answer: "3. Cascading Style Sheets" },
 
 
 
-    {
-        title: "What is JAVA Script?",
+    { title: "What is JAVA Script?",
         choices: ["1. Does not exsist", "2.  connects the ease of a scripting language with the power of Unix network programming.", "3. Art desiging", "4. is a scripting languages, primarily used on the Web"], 
-        answer: "4. is a scripting languages, primarily used on the Web"
-    },
+        answer: "4. is a scripting languages, primarily used on the Web   },
 
 
 
-    {
-        title: "What do you use to add an image ",
+    {  title: "What do you use to add an image ",
         choices: ["1. <image scr "Images.jpg" ", "2. <img>", "3. Add images:", "4. insert image: ' ' "],
-        answer: "1. <image scr "Images.jpg" "
-    },
+        answer: "1. <image scr "Images.jpg" "},
 
-
-
-    {
-        title: "What file gives instructions?:",
+    {title: "What file gives instructions?:",
         choices: ["1. index", "2. README", "3. script.js", "D. style.css"],
-        answer: "2. README"
-    },
-  
+        answer: "2. README" },
   ];
+
 //timer 
   var score = 0;
   var questionIndex = 0;
@@ -46,7 +34,7 @@ var questions = [
   var timer = document.querySelector("#startTimer");
   var questionsDiv = document.querySelector("#questions");
   var container = document.querySelector("#container");
-  // timer
+// timer
   var secondsLeft = 50;
   var sameCost = 0;
   var cost = 5;
@@ -86,9 +74,7 @@ var questions = [
         divNew.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     })
-  }
-
-  function compare(event) {
+  } function compare(event) {
     var element = event.target;
   
     if (element.matches("button")) {
@@ -102,8 +88,7 @@ var questions = [
         } else {
           
             secondsLeft = secondsLeft - cost;
-            createDiv.textContent = "Ops! That was not correct... The correct answer is:  " + questions[questionIndex].answer;
-        }
+            createDiv.textContent = "Ops! That was not correct... The correct answer is:  " + questions[questionIndex].answer;}
   
     }
     // active question
@@ -115,10 +100,9 @@ var questions = [
     } else {
         render(questionIndex);
     }
-    questionsDiv.appendChild(createDiv);
+    questionsDiv.appendChild(createDiv);}
   
-  }
-  // result of quiz and user name 
+// result of quiz and user name 
   function allDone() {
     questionsDiv.innerHTML = "";
     absoluteTime.innerHTML = "";
@@ -143,8 +127,7 @@ var questions = [
         clearInterval(sameCost);
         newText.textContent = "Final score is: " + timeRemaining;
   
-        questionsDiv.appendChild(newText2);
-    }
+        questionsDiv.appendChild(newText2);  }
   
 
     var createLabel = document.createElement("label");
