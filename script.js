@@ -4,7 +4,7 @@
   let quizQuestion = document.getElementById("quiz-question");
   let buttonContainer = document.getElementById("quiz-button");
   let initialTextBox = document.getElementById("hs-textbox");
-  let initialButton = document.getElementById("username-button");
+  let usernameButton = document.getElementById("username-button");
   let currentQuestion = -1;
   let userScore = 0;
   let timeLeft = 120;
@@ -172,6 +172,56 @@
       document.getElementById("quizExit-container").setAttribute('style', 'display: block'); 
       timeLeft = 0;
   
+  }
+  
+  function saveUser() {
+          usernameTextBox = document.getElementById("username-textbox");
+  
+  let saveUserScore = 
+      {
+      userHS userScore,
+      userNameTextBox: userNameTextBox.value.trim()
+  };
+  
+  let topScores = [];
+  let scoresString = localStorage.getItem("userScores");
+  
+  if (scoresString == undefined || scoresString == null) {
+      topScores = []
+  } else {
+      topScores = JSON.parse(scoresString);
+  }
+  
+  topScores.push(saveUserScore);
+  localStorage.setItem("userScores", JSON.stringify(topScores)); 
+  
+  tryAgain();
+  
+  }
 
+  function tryAgain() {
+      document.getElementById("quizExit-container").setAttribute('style', 'display: none');
+      document.getElementById("return-container").setAttribute('style', 'display: block');
+  
+  }
+  
+  function getHS() {
+      document.getElementById("hs-popup").setAttribute('style', 'display: block');
+      document.getElementById("hs-list").innerHTML = "Score" ;
+      let topScores = [];
+      let scoresString = localStorage.getItem("userScores");
+
+      if (scoresString !== undefined ||   scoresString !== null) {
+          topScores = JSON.parse(scoresString);
+  
+          // for loop to loop through saves high scores 
+          for(let i = 0; i < 10; i++) {
+          if(i < topScores.length) {    
+          document.getElementById("high-score-list").innerHTML += topScores[i].initialsEntered + " " + topScores[i].userHighScore.toString();
+              }
+          }
+      } 
+      
+  }
   
  
