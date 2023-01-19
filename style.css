@@ -1,30 +1,50 @@
-p{
-    background-color: yellow;
-    display: flex;
-    align-items: left;
-    justify-content: top;
-    font-size: 30px;
-    margin:0;
-    height: 60px;
-    width: 100px;
+body {
+    font-family: Century Gothic;
+    background-color: rgba(253, 170, 206, 0.295);
 }
 
-    }
-    font color-scheme: blue;
-    margin: 2px
-    padding: 1px
-    box-sizing: border-box
-    font-family: monospace
-    border-radius: 1rem
-
-.btn-grid{
-    display: grid;
+.main-container {
+    width: 100%; 
+    height: 100%; 
+    display: none; 
+    position: fixed; 
+    padding-bottom: 50px; 
+    background-color: rgba(116, 34, 222, 0.436); 
 }
 
-.btn {
-    background-color: green;
+#timer-text {
+    position: relative;
+    float: right;
 }
 
-.btn:hover {
-    color: yellow
+#hs {
+    align-items: center;
+    position: relative;
 }
+
+button#startQuizButton {
+    float: left;
+    
+}
+
+#hs-button {
+    float: right;
+}
+
+button {
+    border: 2px solid var(--buttonBorder);
+    background-color: var(--bgContainer);
+    color: var(--textPageColor);
+    width: 250px;
+    font-size: 16px;
+    padding: 12px 28px;
+    margin: 30px 10px 10px 10px;
+    border-radius: 4px;
+    display: block;
+    
+    
+
+
+    
+
+
