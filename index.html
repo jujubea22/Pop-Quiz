@@ -3,12 +3,80 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
+    <title>DEVINE POP Quiz</title>
+
+</head>
+
+<body>
+
+    <!-- container -->
+    <div class="container">
+
+    <!-- Timer -->
+        <div><span id="timer-text"></span></span></div>
+
+    <!-- Intro to Quiz -->
+        <div id="intro-box">
+            <span id="rules-header"><h3>DEVINE POP Quiz</h3></span>
+            <span id="intro-box">
+                Take this POP Quiz to test your knowledge on all things coding! 
+                Keep in mind this quiz has a timer! Every wrong answer will subtract time.
+                BEST OF LUCK 
+            </span>
+
+        <div><button type="button"  class="button" id="start-button" onclick="startQuiz()">Start Quiz!</button></div>
+        </div>
+
+<!-- Questions Container -->
+    <div id="quiz-container">
+        <div id="question-container"></div>
+
+        <div id="quiz-button" class="button"></div>
+
+    </div>
+        <!-- High Scores -->
+        <div id="high-score">
+            <div id="hs-content">
+            <button type="button" id="btn-hs" class="button" onclick="geths()">High Scores</button>
+            <div id="hs-popup" class="hs-main-container">    
+            <div id="high-score-list" class="hs-child-content">
+                    <div id="high-score-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="score"></div>
+
+        <div id="hs"></div>
+
+        <div id="username">Enter short username or intials: <input type="text" id="username-textbox"></div>
+
+        <div><button type="button" class="button" id="username-button" onclick="saveUser()">Submit</button></div>
+        
+    </div>
+    
+    <div id="return-container">
+
+        <span id="return-text"><h3>Way to go!!</h3>
+            <p class="end-text">CONGRATS on completeing the quiz!</p>
+            <p class="end-text">View other high scores on the High Score Page!</p>
+        </span>
+
+    </div>
+
+    </div>
+
+    <!-- Link JS -->
+    <script src="Pop-Quiz-main\script.js"></script>
+</body>
+
+</html>
 
 </body>
 </html>
