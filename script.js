@@ -48,7 +48,7 @@
           }, {
               text: "is a scripting languages, primarily used on the Web", isCorrect: true
           }] 
-      },    {
+      }    {
           question: "What do you use to add an image ",
           answers; [{
               text: "image scr =Images.jpg", isCorrect: true
@@ -59,7 +59,7 @@
           }, {
               text: "insert image", isCorrect: false
           }] 
-      }, {
+      } {
           question: " Where do you add styling for sites",
           answers; [{
               text: "Functions", isCorrect: false
@@ -70,7 +70,7 @@
           }, {
               text: "Bootstrap", isCorrect: false
           }] 
-      },   {
+      }   {
           question: "What type of bracket is used to indicate that a variable is an array?",
           answers; [{
               text: "( )", isCorrect: false
@@ -81,7 +81,7 @@
           }, {
               text: "||", isCorrect: false
           }] 
-      }, 
+      }
 
   function startQuiz(onclick) {
       userScore = 0;
@@ -177,11 +177,6 @@
   function saveUser() {
           usernameTextBox = document.getElementById("username-textbox");
   
-  let saveUserScore = 
-      {
-      userHS userScore,
-      userNameTextBox: userNameTextBox.value.trim()
-  };
   
   let topScores = [];
   let scoresString = localStorage.getItem("userScores");
@@ -205,23 +200,9 @@
   
   }
   
-  function getHS() {
+  function getHS() 
       document.getElementById("hs-popup").setAttribute('style', 'display: block');
       document.getElementById("hs-list").innerHTML = "Score" ;
       let topScores = [];
-      let scoresString = localStorage.getItem("userScores");
-
-      if (scoresString !== undefined ||   scoresString !== null) {
-          topScores = JSON.parse(scoresString);
-  
-          // for loop to loop through saves high scores 
-          for(let i = 0; i < 10; i++) {
-          if(i < topScores.length) {    
-          document.getElementById("high-score-list").innerHTML += topScores[i].initialsEntered + " " + topScores[i].userHighScore.toString();
-              }
-          }
-      } 
-      
-  }
-  
- 
+      let scoresString = localStorage.getItem("userScores"))
+',' expected.ts(1005)
